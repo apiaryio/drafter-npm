@@ -1,0 +1,34 @@
+language: nodejs
+sudo: required
+dist: trusty
+
+node_js:
+- '6'
+- '4'
+- '0.12'
+- '0.10'
+
+env:
+- PROTAGONIST=true
+- PROTAGONIST=false
+
+before_install:
+- if ! "$PROTAGONIST"; then sudo apt-get purge build-essential && sudo apt-get autoremove; fi
+
+install:
+- npm install
+
+before_script:
+- if ! "$PROTAGONIST" && [ -d "node_modules/protagonist" ]; then echo "Protagonist was successfully installed (should not have been)." && exit 1; fi
+
+script:
+- npm test
+
+deploy:
+  provider: npm
+  email: sre@apiary.io
+  api_key:
+    secure: Kj+S5GtMez3gOvzJ7KtaAkEnAPi1/Ux33ImZZyZXs4M8s8yDrMsFmuWEp4DqwPFyYs0I2y5mcTpHVHPoDo7ECfHpI9URrQEtuxC3Pn1jTv/xQD21cJ5QVCa0L0wfuQMSoSRVneTFvnDwNRFUHeLFFPeiOaXtcNK0aHp/YMt87RFYfyC/yXD75XpBDj4BIMSOQouOOnimLQNSmxgnZ3zcLPc4pr5w4JtPfTnyTBvk3yc2/l5IN/m7KHGDbiwAAO1eLS6MzqwYD9Bchmh3Pnn0QZNpLjWC2i8H8FUw9TsUdzDuMjkXOrwvpyGglpf9EuffIpDXRgQVWuwzwh3/wtkMcUGUGEuBYR/tPbh01wKFXHeZeuh0qcrvMynpOKCz1tXxSUtBBKPZw8YAuV51iDVpnaBSvSV/4ZPRRJo6O8vwhk1mSPBV9euv21rUfyFLOVNWrG0niQCEzr1gHHY8EaI9NtULE1EmQTNOoujYj5jOgCgWJSthR6sygVnbGX+xqmGSCH7+yCZn7P1aqubdeXufsyAaU7qTaY1QeGWlIbR7xBQvQfyIlTUGp4Mv1tEKOMdYjpZH5KEwt64/J0bxKHn3Iu6ZZ7V1jBM3cPA3b0Cx3/wsytvYSMaxcRxenEvSYe/JtfPqGccZsD/DFzTf9IpLI2wxoavRHiuBQSfYCwAYYiY=
+  on:
+    tags: true
+    repo: apiaryio/drafter-npm
