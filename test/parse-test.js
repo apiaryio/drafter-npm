@@ -17,7 +17,7 @@ describe('Parsing an API Blueprint', function() {
     ]
   }
 
-  it('should parse an API Blueprint asyncronously', function(done) {
+  it('should parse an API Blueprint asynchronously', function(done) {
     drafter.parse(blueprint, {}, function(error, result) {
       expect(error).to.be.null;
       expect(result).to.deep.equal(parseResult);
@@ -25,7 +25,7 @@ describe('Parsing an API Blueprint', function() {
     });
   });
 
-  it('should parse an API Blueprint syncronously', function() {
+  it('should parse an API Blueprint synchronously', function() {
     var blueprint = '# API Blueprint';
 
     var result = drafter.parseSync(blueprint, {});

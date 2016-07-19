@@ -9,12 +9,12 @@ on the C++ binding to Drafter
 [Protagonist](https://github.com/apiaryio/protagonist). If for any reason
 Protagonist is not installable, this package will fallback to using the slower,
 pure JavaScript version of Drafter,
-[drafter.js](https://github.com/apiaryio/drafter.js)
+[drafter.js](https://github.com/apiaryio/drafter.js).
 
 ## Installation
 
-drafter can be installed from NPM. If you're using Drafter from a web browser.
-Check out [drafter.js](https://github.com/apiaryio/drafter.js).
+Drafter can be installed from NPM. If you want to use Drafter from a web
+browser, check out [drafter.js](https://github.com/apiaryio/drafter.js).
 
 ```shell
 $ npm install drafter
@@ -31,7 +31,7 @@ Once you've included drafter, you can parse an API Blueprint asynchronously:
 ```js
 var options = {
   generateSourcemap: true,
-}
+};
 
 drafter.parse('# API Blueprint...', options, function(err, result) {
   if (err) {
