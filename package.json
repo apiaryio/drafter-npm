@@ -1,0 +1,32 @@
+{
+  "name": "drafter",
+  "version": "1.0.0",
+  "description": "Node API Blueprint Parser",
+  "main": "lib/drafter.js",
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apiaryio/drafter-npm"
+  },
+  "author": "Apiary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiaryio/drafter-npm/issues"
+  },
+  "homepage": "https://github.com/apiaryio/drafter-npm",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "drafter.js": "^2.4.3"
+  },
+  "optionalDependencies": {
+    "protagonist": "^1.4.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0"
+  }
+}
