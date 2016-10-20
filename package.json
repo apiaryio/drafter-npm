@@ -20,10 +20,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "drafter.js": "^2.5.0"
+    "drafter.js": "^2.6.0"
   },
   "optionalDependencies": {
-    "protagonist": "^1.5.0"
+    "protagonist": "^1.6.0"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
