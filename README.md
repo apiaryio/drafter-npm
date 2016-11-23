@@ -46,7 +46,7 @@ Alternatively, you can use Drafter synchronously:
 
 ```js
 try {
-  var result = drafter.parse('# API Blueprint...', options);
+  var result = drafter.parseSync('# API Blueprint...', options);
   console.log(result);
 } catch (err) {
   console.log(err);
