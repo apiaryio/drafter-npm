@@ -1,4 +1,4 @@
-language: nodejs
+language: node_js
 sudo: required
 dist: trusty
 
@@ -15,14 +15,8 @@ env:
 before_install:
 - if ! "$PROTAGONIST"; then sudo apt-get purge build-essential && sudo apt-get autoremove; fi
 
-install:
-- npm install
-
 before_script:
 - if ! "$PROTAGONIST" && [ -d "node_modules/protagonist" ]; then echo "Protagonist was successfully installed (should not have been)." && exit 1; fi
-
-script:
-- npm test
 
 deploy:
   provider: npm
@@ -32,3 +26,6 @@ deploy:
   on:
     tags: true
     repo: apiaryio/drafter-npm
+    node_js: '6'
+    env:
+      - PROTAGONIST=true
