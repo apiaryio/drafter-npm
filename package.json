@@ -4,7 +4,7 @@
   "description": "Node API Blueprint Parser",
   "main": "lib/drafter.js",
   "engines": {
-    "node": ">= 0.12"
+    "node": ">= 4"
   },
   "repository": {
     "type": "git",
