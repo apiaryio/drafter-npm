@@ -30,7 +30,7 @@ Once you've included drafter, you can parse an API Blueprint asynchronously:
 
 ```js
 var options = {
-  generateSourcemap: true,
+  generateSourceMap: true,
 };
 
 drafter.parse('# API Blueprint...', options, function(err, result) {
