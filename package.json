@@ -22,7 +22,7 @@
   "dependencies": {
     "drafter.js": "^2.6.0"
   },
-  "optionalDependencies": {
+  "peerDependencies": {
     "protagonist": "^1.6.0"
   },
   "devDependencies": {
