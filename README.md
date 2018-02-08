@@ -6,8 +6,7 @@ The Drafter NPM package is an API Blueprint parser for Node. This package is a
 wrapper around the underlying C++ parser
 [Drafter](https://github.com/apiaryio/drafter). Drafter NPM optionally depends
 on the C++ binding to Drafter
-[Protagonist](https://github.com/apiaryio/protagonist). If for any reason
-Protagonist is not installable, this package will fallback to using the slower,
+[Protagonist](https://github.com/apiaryio/protagonist) - see [Improving performance](#improving-performance). If Protagonist is not installed, this package will fallback to using the slower,
 pure JavaScript version of Drafter,
 [drafter.js](https://github.com/apiaryio/drafter.js).
 
@@ -72,6 +71,18 @@ Name                   | Description
 ---------------------- | ----------------------------------------------------------
 `requireBlueprintName` | Require parsed blueprints have a title (default: false)
 `generateSourceMap`    | Enable sourcemap generation (default: false)
+
+
+## Improving performance
+Optionally you can also install C++ bindings to [Drafter](https://github.com/apiaryio/drafter) - [Protagonist](https://github.com/apiaryio/protagonist).
+
+```bash
+npm i protagonist
+```
+
+Drafter-npm will use it automatically if it's available.
+
+Protagonist was made optional because of dependency on C++ compiler and long (5+ minutes) install times.
 
 ## License
 
