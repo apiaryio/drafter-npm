@@ -1,6 +1,6 @@
 {
   "name": "drafter",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Node API Blueprint Parser",
   "main": "lib/drafter.js",
   "engines": {
@@ -21,9 +21,6 @@
   },
   "dependencies": {
     "drafter.js": "^2.6.0"
-  },
-  "optionalDependencies": {
-    "protagonist": "^1.6.0"
   },
   "devDependencies": {
     "mocha": "^3.2.0",
