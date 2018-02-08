@@ -4,7 +4,6 @@ dist: trusty
 
 node_js:
 - '6'
-- '4'
 
 env:
 - PROTAGONIST=true
