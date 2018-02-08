@@ -5,17 +5,11 @@ dist: trusty
 node_js:
 - '6'
 
-before_install:
-- if ! "$PROTAGONIST"; then sudo apt-get purge build-essential && sudo apt-get autoremove; fi
-
-before_script:
-- if ! "$PROTAGONIST" && [ -d "node_modules/protagonist" ]; then echo "Protagonist was successfully installed (should not have been)." && exit 1; fi
-
 script:
 - if [ -d "node_modules/protagonist" ]; then echo "Protagonist was installed (should not have been)." && exit 1; fi
 - npm test
 - npm i protagonist
-- if [ -d "node_modules/protagonist" ]; then echo "Protagonist was successfully installed."; fi
+- if ! [ -d "node_modules/protagonist" ]; then echo "Protagonist was not installed." && exit 1; fi
 - npm test
 
 deploy:
