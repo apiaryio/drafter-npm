@@ -9,8 +9,19 @@ describe('Parsing an API Blueprint', function() {
       {
         element: 'category',
         meta: {
-          classes: ['api'],
-          title: 'API Blueprint',
+          classes: {
+            element: 'array',
+            content: [
+              {
+                element: 'string',
+                content: 'api'
+              }
+            ]
+          },
+          title: {
+            element: 'string',
+            content: 'API Blueprint'
+          },
         },
         content: [],
       }

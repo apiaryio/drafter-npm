@@ -3,6 +3,8 @@ sudo: required
 dist: trusty
 
 node_js:
+- '10'
+- '8'
 - '6'
 - '4'
 
@@ -24,6 +26,6 @@ deploy:
   on:
     tags: true
     repo: apiaryio/drafter-npm
-    node_js: '6'
+    node_js: '10'
     env:
       - PROTAGONIST=true
