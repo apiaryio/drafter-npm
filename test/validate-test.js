@@ -27,18 +27,44 @@ describe('Validating an API Blueprint', function() {
         {
           element: 'annotation',
           meta: {
-            classes: ['warning'],
+            classes: {
+              element: 'array',
+              content: [
+                {
+                  element: 'string',
+                  content: 'warning'
+                }
+              ]
+            },
           },
           attributes: {
-            code: 6,
-            sourceMap: [
-              {
-                element: 'sourceMap',
-                content: [
-                  [ 0, 8 ]
-                ]
-              }
-            ]
+            code: {
+              element: 'number',
+              content: 6
+            },
+            sourceMap: {
+              element: 'array',
+              content: [
+                {
+                  element: 'sourceMap',
+                  content: [
+                    {
+                      element: 'array',
+                      content: [
+                        {
+                          element: 'number',
+                          content: 0
+                        },
+                        {
+                          element: 'number',
+                          content: 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           },
           content: "action is missing a response",
         }
@@ -67,18 +93,44 @@ describe('Validating an API Blueprint', function() {
         {
           element: 'annotation',
           meta: {
-            classes: ['error'],
+            classes: {
+              element: 'array',
+              content: [
+                {
+                  element: 'string',
+                  content: 'error'
+                }
+              ]
+            },
           },
           attributes: {
-            code: 4,
-            sourceMap: [
-              {
-                element: 'sourceMap',
-                content: [
-                  [ 18, 9 ]
-                ]
-              }
-            ]
+            code: {
+              element: 'number',
+              content: 4
+            },
+            sourceMap: {
+              element: 'array',
+              content: [
+                {
+                  element: 'sourceMap',
+                  content: [
+                    {
+                      element: 'array',
+                      content: [
+                        {
+                          element: 'number',
+                          content: 18
+                        },
+                        {
+                          element: 'number',
+                          content: 9
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           },
           content: "base type 'A' circularly referencing itself",
         }
