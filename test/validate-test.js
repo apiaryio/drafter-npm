@@ -53,10 +53,30 @@ describe('Validating an API Blueprint', function() {
                       content: [
                         {
                           element: 'number',
+                          attributes: {
+                            line: {
+                              element: 'number',
+                              content: 1
+                            },
+                            column: {
+                              element: 'number',
+                              content: 1
+                            }
+                          },
                           content: 0
                         },
                         {
                           element: 'number',
+                          attributes: {
+                            line: {
+                              element: 'number',
+                              content: 1
+                            },
+                            column: {
+                              element: 'number',
+                              content: 8
+                            }
+                          },
                           content: 8
                         }
                       ]
@@ -119,10 +139,30 @@ describe('Validating an API Blueprint', function() {
                       content: [
                         {
                           element: 'number',
+                          attributes: {
+                            line: {
+                              element: 'number',
+                              content: 2
+                            },
+                            column: {
+                              element: 'number',
+                              content: 1
+                            }
+                          },
                           content: 18
                         },
                         {
                           element: 'number',
+                          attributes: {
+                            line: {
+                              element: 'number',
+                              content: 2
+                            },
+                            column: {
+                              element: 'number',
+                              content: 9
+                            }
+                          },
                           content: 9
                         }
                       ]
