@@ -1,5 +1,11 @@
 # drafter-npm CHANGELOG
 
+## 2.0.0-pre.2
+
+This update now uses Protagonist 2.0.0-pre.4. Please see [Protagonist
+2.0.0-pre.4](https://github.com/apiaryio/protagonist/releases/tag/v2.0.0-pre.4)
+for the list of changes.
+
 ## 2.0.0-pre.1
 
 This update now uses Protagonist 2.0.0-pre.2. Please see [Protagonist
